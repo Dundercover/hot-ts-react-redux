@@ -11,7 +11,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "develop": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
-    "start": "parcel ./src/index.html",
+    "start": "parcel ./src/index.html --port 3000 --open",
     "build": "yarn run type-check && parcel build ./src/index.html --public-url '/'",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
     "test": "jest",

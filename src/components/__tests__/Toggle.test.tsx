@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { render, fireEvent, waitForElement } from 'react-testing-library'
+import { render } from 'react-testing-library'
 
 import Toggle from '../Toggle'
 
+// tslint:disable-next-line: no-empty
 const onChange = () => {}
 
 test('Toggle Component renders with toggle switch', () => {

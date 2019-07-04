@@ -1,6 +1,6 @@
 import { all, call, delay, put, takeLatest } from 'redux-saga/effects'
 
-import { ASYNC_TOGGLE, TOGGLE_LETTER, LetterActionType } from './actions'
+import { ASYNC_TOGGLE, LetterActionType, TOGGLE_LETTER } from './actions'
 
 export function* doAsyncToggle(action: LetterActionType) {
   // contrived example - wait 1 second then fire the regular toggle action

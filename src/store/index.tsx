@@ -1,5 +1,5 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
 import createSagaMiddleware from '@redux-saga/core'
+import { applyMiddleware, combineReducers, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 import { lettersReducer } from './letters/reducers'
@@ -15,7 +15,7 @@ export default function configureStore() {
   const sagaMiddleware = createSagaMiddleware()
   const middleWareEnhancer = applyMiddleware(sagaMiddleware)
 
-  var win = window as any
+  const win = window as any
 
   if (!win.store) {
     win.store = createStore(

@@ -1,21 +1,21 @@
-import { LettersState } from './reducers'
+import { ILettersState } from './reducers'
 
 export const ASYNC_TOGGLE = 'ASYNC_TOGGLE'
 export const TOGGLE_LETTER = 'TOGGLE_LETTER'
 
-export interface ToggleLetterAction {
+export interface IToggleLetterAction {
   type: typeof TOGGLE_LETTER
-  key: keyof LettersState
+  key: keyof ILettersState
 }
 
-export interface AsyncToggleLetterAction {
+export interface IAsyncToggleLetterAction {
   type: typeof ASYNC_TOGGLE
-  key: keyof LettersState
+  key: keyof ILettersState
 }
 
-export type LetterActionType = ToggleLetterAction
+export type LetterActionType = IToggleLetterAction
 
-export function changeSwitch(key: keyof LettersState): ToggleLetterAction {
+export function changeSwitch(key: keyof ILettersState): IToggleLetterAction {
   return {
     type: TOGGLE_LETTER,
     key,
@@ -23,8 +23,8 @@ export function changeSwitch(key: keyof LettersState): ToggleLetterAction {
 }
 
 export function asyncToggleLetter(
-  key: keyof LettersState
-): AsyncToggleLetterAction {
+  key: keyof ILettersState
+): IAsyncToggleLetterAction {
   return {
     type: ASYNC_TOGGLE,
     key,

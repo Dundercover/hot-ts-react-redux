@@ -1,12 +1,12 @@
-import * as React from 'react'
 import { bind } from 'helpful-decorators'
+import * as React from 'react'
 import { connect } from 'react-redux'
 
 import { AppState } from '../store'
-import { changeSwitch, asyncToggleLetter } from '../store/letters/actions'
+import { asyncToggleLetter, changeSwitch } from '../store/letters/actions'
 import Toggle from './Toggle'
 
-interface AppProps {
+interface IAppProps {
   a: boolean
   b: boolean
 
@@ -14,26 +14,8 @@ interface AppProps {
   asyncToggleLetter: typeof asyncToggleLetter
 }
 
-class App extends React.PureComponent<AppProps, {}> {
-  private onToggleChange(key: 'a' | 'b'): void {
-    this.props.changeSwitch(key)
-  }
-
-  private onAsyncToggleChange(key: 'a' | 'b'): void {
-    this.props.asyncToggleLetter(key)
-  }
-
-  @bind
-  private getToggleChanger(key: 'a' | 'b'): () => void {
-    return () => this.onToggleChange(key)
-  }
-
-  @bind
-  private getAsyncToggleChanger(key: 'a' | 'b'): () => void {
-    return () => this.onAsyncToggleChange(key)
-  }
-
-  render() {
+class App extends React.PureComponent<IAppProps, {}> {
+  public render() {
     return (
       <>
         <div className="container">
@@ -50,6 +32,23 @@ class App extends React.PureComponent<AppProps, {}> {
         </button>
       </>
     )
+  }
+  private onToggleChange(key: 'a' | 'b'): void {
+    this.props.changeSwitch(key)
+  }
+
+  private onAsyncToggleChange(key: 'a' | 'b'): void {
+    this.props.asyncToggleLetter(key)
+  }
+
+  @bind
+  private getToggleChanger(key: 'a' | 'b'): () => void {
+    return () => this.onToggleChange(key)
+  }
+
+  @bind
+  private getAsyncToggleChanger(key: 'a' | 'b'): () => void {
+    return () => this.onAsyncToggleChange(key)
   }
 }
 

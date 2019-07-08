@@ -20,7 +20,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run prettify"
+      "pre-commit": "yarn run prettify",
+      "post-checkout": "yarn install"
     }
   },
   "engines": {

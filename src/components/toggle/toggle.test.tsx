@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import * as React from 'react'
 
-import Toggle from '../Toggle'
+import Toggle from './toggle'
 
 // tslint:disable-next-line: no-empty
 const onChange = () => {}

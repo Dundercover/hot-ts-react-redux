@@ -2,9 +2,9 @@ import { bind } from 'helpful-decorators'
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-import { AppState } from '../store'
-import { asyncToggleLetter, changeSwitch } from '../store/letters/actions'
-import Toggle from './Toggle'
+import { AppState } from '../../store/index'
+import { asyncToggleLetter, changeSwitch } from '../../store/letters/actions'
+import Toggle from '../toggle'
 
 interface IAppProps {
   a: boolean

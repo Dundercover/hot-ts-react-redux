@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ToggleButton from './ToggleButton'
+import ToggleButton from './toggle-button'
 
 interface IToggleProps {
   on?: boolean

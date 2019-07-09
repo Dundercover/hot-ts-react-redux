@@ -1,6 +1,7 @@
 import createSagaMiddleware from '@redux-saga/core'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import thunkMiddleware from 'redux-thunk'
 
 import { lettersReducer } from './letters/reducers'
 import rootSaga from './sagas'
@@ -13,7 +14,7 @@ export type AppState = ReturnType<typeof rootReducer>
 
 export default function configureStore() {
   const sagaMiddleware = createSagaMiddleware()
-  const middleWareEnhancer = applyMiddleware(sagaMiddleware)
+  const middleWareEnhancer = applyMiddleware(sagaMiddleware, thunkMiddleware)
 
   const win = window as any
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Action } from 'redux'
 import { ThunkAction } from 'redux-thunk'
-import { AppState } from '../../store/index'
+import { AppState } from '../../utils/root-reducer'
 
 import {
   CHANGED,

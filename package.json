@@ -36,10 +36,10 @@
       "js"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/src/set-up-tests.ts"
+      "<rootDir>/src/utils/set-up-tests.ts"
     ],
     "moduleNameMapper": {
-      ".+\\.css$": "<rootDir>/src/style-mock.ts"
+      ".+\\.css$": "<rootDir>/src/utils/style-mock.ts"
     },
     "testMatch": [
       "**/__tests__/*.(test|spec).(ts|tsx|js)"

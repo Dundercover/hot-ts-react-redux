@@ -1,14 +1,8 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux'
+import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
-import { default as counterReducer } from '../components/counter/counter-reducer'
-
-const rootReducer = combineReducers({
-  counter: counterReducer,
-})
-
-export type AppState = ReturnType<typeof rootReducer>
+import rootReducer from './root-reducer'
 
 export default function configureStore() {
   const middleWareEnhancer = applyMiddleware(thunkMiddleware)

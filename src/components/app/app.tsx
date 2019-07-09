@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import { AppState } from '../../store/index'
 import { asyncToggleLetter, changeSwitch } from '../../store/letters/actions'
+import Counter from '../counter'
 import Toggle from '../toggle'
 
 interface IAppProps {
@@ -30,6 +31,8 @@ class App extends React.PureComponent<IAppProps, {}> {
         <button onClick={this.getAsyncToggleChanger('a')}>
           Delay Toggle A
         </button>
+
+        <Counter />
       </>
     )
   }

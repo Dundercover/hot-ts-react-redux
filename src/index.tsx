@@ -15,8 +15,8 @@ const renderApp = () =>
       <div style={{ textAlign: 'center', width: '100%' }}>
         <h2>HMR Example</h2>
         <h3>
-          Change the state using the toggles, then edit a file to see the change
-          instantly.
+          Change the state using the counter functionality, then edit a file to
+          see the change instantly.
         </h3>
       </div>
       <App />

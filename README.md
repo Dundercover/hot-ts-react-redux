@@ -10,7 +10,7 @@ This is an highly opinionated project skeleton for single page web apps.
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html) - Write stateful components without classes
 - [Redux](https://redux.js.org/) + [React-Redux](https://react-redux.js.org/) -
   State you can reason about + time travel -- use the dev tools
-- [Redux-Saga](https://redux-saga.js.org/) - Async redux actions
+- [Redux-Thunk](https://github.com/reduxjs/redux-thunk) - Async redux actions
 - [Prettier](https://www.npmjs.com/package/prettier) and
   [Husky](https://github.com/typicode/husky) to automatically reformat your code
   as a pre-commit hook and to require passing tests before pushing.

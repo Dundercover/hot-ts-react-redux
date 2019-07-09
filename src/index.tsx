@@ -1,28 +1,10 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-
-import configureStore from './utils/configure-store'
 
 import App from './components/app'
 import './index.css'
 
-const store = configureStore()
-
-const renderApp = () =>
-  render(
-    <Provider store={store}>
-      <div style={{ textAlign: 'center', width: '100%' }}>
-        <h2>HMR Example</h2>
-        <h3>
-          Change the state using the counter functionality, then edit a file to
-          see the change instantly.
-        </h3>
-      </div>
-      <App />
-    </Provider>,
-    document.getElementById('root')
-  )
+const renderApp = () => render(<App />, document.getElementById('app'))
 
 if (process.env.NODE_ENV !== 'production' && module.hot) {
   module.hot.accept(renderApp)

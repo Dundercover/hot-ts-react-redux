@@ -1,28 +1,37 @@
 import * as React from 'react'
 import { Provider } from 'react-redux'
+import styled from 'styled-components'
+
+import { LocalizationProvider, useFormatMessage } from '../../localization'
 import configureStore from '../../utils/configure-store'
+import Counter from '../counter'
 
 const store = configureStore()
 
-import styled from 'styled-components'
-import Counter from '../counter'
-
-const StyledApp = styled.div`
-  text-align: center;
-  width: 100%;
+const StyledAppContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
-const App = () => (
-  <Provider store={store}>
-    <StyledApp>
-      <h2>HMR Example</h2>
-      <h3>
-        Change the state using the counter functionality, then edit a file to
-        see the change instantly.
-      </h3>
+const AppContent = () => {
+  const f = useFormatMessage()
+  return (
+    <StyledAppContent>
+      <h2>{f('START_PAGE_TITLE')}</h2>
+      <h3>{f('START_PAGE_HOT_RELOAD_TEXT')}</h3>
+      <h3>{f('START_PAGE_LOCALIZATION_TEXT')}</h3>
       <Counter />
-    </StyledApp>
-  </Provider>
+    </StyledAppContent>
+  )
+}
+
+const App = () => (
+  <LocalizationProvider>
+    <Provider store={store}>
+      <AppContent />
+    </Provider>
+  </LocalizationProvider>
 )
 
 export default App

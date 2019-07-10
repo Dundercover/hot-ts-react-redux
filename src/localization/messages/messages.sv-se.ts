@@ -5,8 +5,9 @@
  * Format keys using upper snake case and name them by a hierarchy representing location inside the app
  * Example: 'USER_LIST_PAGE_ADD_BUTTON_TEXT'
  */
+import { IMessages } from './messages'
 
-export default {
+const messages: IMessages = {
   COUNTER_CLEAR_BUTTON_TEXT: 'Nollställ',
   COUNTER_FETCH_BUTTON_TEXT: 'Hämta',
   COUNTER_INCREMENT_BUTTON_TEXT: 'Öka',
@@ -18,3 +19,5 @@ export default {
     'Det här projektet har även grundläggande stöd för flera språk. Testa ändra webbläsarens språk till engelska (en-US) och ladda om sidan.',
   START_PAGE_TITLE: 'HMR - Exempel',
 }
+
+export default messages

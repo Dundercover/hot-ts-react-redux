@@ -5,6 +5,7 @@
  * Format keys using upper snake case and name them by a hierarchy representing location inside the app
  * Example: 'USER_LIST_PAGE_ADD_BUTTON_TEXT'
  */
+import { IMessages } from './messages'
 
 export default {
   COUNTER_CLEAR_BUTTON_TEXT: 'Clear',

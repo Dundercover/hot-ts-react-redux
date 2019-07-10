@@ -7,3 +7,5 @@ export { svSE, enUS }
 
 export const getMessages = (locale: Locale) =>
   locale === 'en-US' ? enUS : svSE
+
+export * from './messages'

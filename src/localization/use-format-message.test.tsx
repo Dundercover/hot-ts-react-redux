@@ -1,9 +1,9 @@
 import { cleanup, render } from '@testing-library/react'
-import { LocalizationProvider } from 'localization'
 import React from 'react'
-
 import { MessageValue } from 'react-intl'
+
 import { getLocale } from './get-locale'
+import LocalizationProvider from './localization-provider'
 import { IMessages } from './messages'
 import useFormatMessage from './use-format-message'
 

@@ -42,7 +42,7 @@
       ".+\\.css$": "<rootDir>/src/utils/style-mock.ts"
     },
     "testMatch": [
-      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+      "**/*.(test|spec).(ts|tsx|js)"
     ]
   },
   "keywords": [

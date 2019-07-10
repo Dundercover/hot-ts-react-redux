@@ -4,7 +4,9 @@ import styled from 'styled-components'
 import { change, fetch, increment, reset } from './counter-action-creators'
 import { selectCount, selectIsLoadingCount } from './counter-selectors'
 
-const StyledButton = styled.button``
+const StyledButton = styled.button`
+  background-color: aliceblue;
+`
 
 const Counter: React.FunctionComponent = ({ children }) => {
   const count = useSelector(selectCount)

@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 
-import { useFormatMessage } from '../../localization'
+import { formatMessage as f } from '../../localization'
 import { change, fetch, increment, reset } from './counter-action-creators'
 import { selectCount, selectIsLoadingCount } from './counter-selectors'
 
@@ -14,7 +14,6 @@ const Counter: React.FunctionComponent = ({ children }) => {
   const count = useSelector(selectCount)
   const isLoading = useSelector(selectIsLoadingCount)
   const dispatch = useDispatch()
-  const f = useFormatMessage()
 
   const handleIncrement = useCallback(
     (event: React.MouseEvent<HTMLButtonElement>) => dispatch(increment(1)),

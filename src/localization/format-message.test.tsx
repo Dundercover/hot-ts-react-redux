@@ -2,10 +2,10 @@ import { cleanup, render } from '@testing-library/react'
 import React from 'react'
 import { MessageValue } from 'react-intl'
 
+import f from './format-message'
 import { getLocale } from './get-locale'
 import LocalizationProvider from './localization-provider'
 import { IMessages } from './messages'
-import useFormatMessage from './use-format-message'
 
 jest.mock('./get-locale')
 
@@ -24,11 +24,10 @@ const FormatMessage: React.FunctionComponent<{
     [key: string]: MessageValue
   }
 }> = ({ id, values }) => {
-  const f = useFormatMessage()
   return <div data-testid="format-text">{f(id, values)}</div>
 }
 
-describe('useFormatMessage', () => {
+describe('formatMessage', () => {
   test('returns Öka for locale sv-SE', () => {
     getLocaleMock.mockReturnValueOnce('sv-SE')
     const { getByTestId } = renderWithLocalization(

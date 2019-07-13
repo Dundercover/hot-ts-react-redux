@@ -1,7 +1,3 @@
-import React from 'react'
-import { Action } from 'redux'
-import { ThunkAction } from 'redux-thunk'
-
 import {
   CHANGED,
   CounterActionTypes,

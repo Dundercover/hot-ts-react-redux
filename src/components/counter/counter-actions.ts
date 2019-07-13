@@ -1,7 +1,3 @@
-import React from 'react'
-import { Action } from 'redux'
-import { ThunkAction } from 'redux-thunk'
-
 export const INCREMENT_ACTION_TYPE = 'counter/IncrementAction'
 export const RESET_ACTION_TYPE = 'counter/ResetAction'
 

@@ -7,7 +7,7 @@
  */
 import { IMessages } from './messages'
 
-const messages: IMessages = {
+const messages: IMessages & Record<string, string> = {
   COUNTER_CLEAR_BUTTON_TEXT: 'Nollställ',
   COUNTER_FETCH_BUTTON_TEXT: 'Hämta',
   COUNTER_INCREMENT_BUTTON_TEXT: 'Öka',

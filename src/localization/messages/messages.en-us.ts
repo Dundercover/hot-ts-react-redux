@@ -7,7 +7,7 @@
  */
 import { IMessages } from './messages'
 
-export default {
+const messages: IMessages & Record<string, string> = {
   COUNTER_CLEAR_BUTTON_TEXT: 'Clear',
   COUNTER_FETCH_BUTTON_TEXT: 'Fetch',
   COUNTER_INCREMENT_BUTTON_TEXT: 'Increment',
@@ -19,3 +19,5 @@ export default {
     'This project also comes with basic localization support. Try it out by changing the browser language to swedish (sv-SE) and refresh the page.',
   START_PAGE_TITLE: 'HMR Example',
 }
+
+export default messages

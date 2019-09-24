@@ -1,11 +1,11 @@
 import { cleanup, render } from '@testing-library/react'
 import React from 'react'
-import { MessageValue } from 'react-intl'
 
-import f from './format-message'
+import { FormatXMLElementFn, PrimitiveType } from 'intl-messageformat'
 import { getLocale } from './get-locale'
 import LocalizationProvider from './localization-provider'
 import { IMessages } from './messages'
+import useFormatMessage from './use-format-message'
 
 jest.mock('./get-locale')
 
@@ -20,14 +20,15 @@ const renderWithLocalization = (component: React.ReactNode) => {
 // Wrap the hook in a component to test it in its context
 const FormatMessage: React.FunctionComponent<{
   id: keyof IMessages
-  values?: {
-    [key: string]: MessageValue
-  }
-}> = ({ id, values }) => {
+  values?:
+    | Record<string, PrimitiveType | React.ReactElement | FormatXMLElementFn>
+    | undefined
+}> = ({ id, values = {} }) => {
+  const f = useFormatMessage()
   return <div data-testid="format-text">{f(id, values)}</div>
 }
 
-describe('formatMessage', () => {
+describe('useFormatMessage', () => {
   test('returns Öka for locale sv-SE', () => {
     getLocaleMock.mockReturnValueOnce('sv-SE')
     const { getByTestId } = renderWithLocalization(

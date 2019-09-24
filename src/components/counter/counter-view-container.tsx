@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { formatMessage as f } from '../../localization'
+import { useFormatMessage } from '../../localization'
 import { change, fetch, increment, reset } from './counter-action-creators'
 import { selectCount, selectIsLoadingCount } from './counter-selectors'
 
@@ -11,6 +11,7 @@ const CounterViewContainer: React.FunctionComponent = ({ children }) => {
   const count = useSelector(selectCount)
   const isLoading = useSelector(selectIsLoadingCount)
   const dispatch = useDispatch()
+  const f = useFormatMessage()
 
   const messages = {
     valueText: f('COUNTER_VALUE_TEXT', { value: count }),

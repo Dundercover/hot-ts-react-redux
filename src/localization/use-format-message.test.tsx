@@ -21,7 +21,7 @@ const renderWithLocalization = (component: React.ReactNode) => {
 const FormatMessage: React.FunctionComponent<{
   id: keyof IMessages
   values?:
-    | Record<string, PrimitiveType | React.ReactElement | FormatXMLElementFn>
+    | Record<string, string | PrimitiveType | FormatXMLElementFn<string, string>>
     | undefined
 }> = ({ id, values = {} }) => {
   const f = useFormatMessage()

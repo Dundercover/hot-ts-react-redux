@@ -6,11 +6,11 @@ const StyledButton = styled.button`
 `
 
 export interface ICounterMessages {
-  valueText: JSX.Element
-  incrementButtonText: JSX.Element
-  clearButtonText: JSX.Element
-  fetchButtonText: JSX.Element
-  isLoading: JSX.Element
+  valueText: string
+  incrementButtonText: string
+  clearButtonText: string
+  fetchButtonText: string
+  isLoading: string
 }
 
 interface ICounterProps {

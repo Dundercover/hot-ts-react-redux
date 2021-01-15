@@ -8,7 +8,7 @@ export default () => {
     id: keyof IMessages,
     values: Record<
       string,
-      PrimitiveType | React.ReactElement | FormatXMLElementFn
+      string | PrimitiveType | FormatXMLElementFn<string, string>
     > = {}
   ) => intl.formatMessage({ id }, values)
 }

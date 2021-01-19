@@ -1,13 +1,18 @@
-import * as React from 'react'
-import { render } from 'react-dom'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import App from './components/app'
-import './index.css'
+import './styles.css'
 
-const renderApp = () => render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app')
+)
 
-if (process.env.NODE_ENV !== 'production' && module.hot) {
-  module.hot.accept(renderApp)
+// Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
+// Learn more: https://snowpack.dev/concepts/hot-module-replacement
+if (import.meta.hot) {
+  import.meta.hot.accept()
 }
-
-renderApp()

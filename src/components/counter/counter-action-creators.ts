@@ -48,13 +48,13 @@ export const fetch = (): ThunkAction<
   AppState,
   null,
   Action<string>
-> => async dispatch => {
+> => async (dispatch) => {
   dispatch({ type: FETCH_STARTED })
   const asyncResp = await exampleAPI()
   dispatch(fetchFinished(asyncResp))
 }
 
 async function exampleAPI() {
-  await Promise.resolve(new Promise(resolve => setTimeout(resolve, 2000)))
+  await Promise.resolve(new Promise((resolve) => setTimeout(resolve, 2000)))
   return Math.floor(Math.random() * 999999)
 }

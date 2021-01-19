@@ -1,12 +1,10 @@
-import { cleanup, render } from '@testing-library/react'
-import React from 'react'
+import * as React from 'react'
+import { render } from '@testing-library/react'
 
 import App from './app'
 
-afterEach(cleanup)
-
 describe('App', () => {
-  test('does not break', () => {
+  it('does not break', () => {
     render(<App />)
   })
 })

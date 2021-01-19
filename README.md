@@ -4,7 +4,7 @@ This is an highly opinionated project skeleton for single page web apps.
 
 ## Made Up Of
 
-- [Parcel](https://parceljs.org/) - Very fast builds with litte config
+- [Snowpack](https://www.snowpack.dev) - Very fast builds with ESM modules in browser
 - [Typescript](https://www.typescriptlang.org/) - Avoid stupid errors using static typing
 - [React](https://reactjs.org/) - Component-based, declarative views
 - [React Hooks](https://reactjs.org/docs/hooks-intro.html) - Write stateful components without classes
@@ -14,8 +14,8 @@ This is an highly opinionated project skeleton for single page web apps.
 - [Prettier](https://www.npmjs.com/package/prettier) and
   [Husky](https://github.com/typicode/husky) to automatically reformat your code
   as a pre-commit hook and to require passing tests before pushing.
-- [Jest](https://jestjs.io/index.html) - Test framework.
-- [Hot Module Replacement](https://parceljs.org/hmr.html) - Witness your changes without reloading your
+- [Web Test Runner](https://github.com/modernweb-dev/web/tree/master/packages/test-runner) - Test framework.
+- [Hot Module Replacement](https://www.snowpack.dev/concepts/hot-module-replacement) - Witness your changes without reloading your
   browser or losing your redux state
 
 ## Initial Setup
@@ -26,7 +26,7 @@ This is an highly opinionated project skeleton for single page web apps.
 
     yarn start
 
-This should open `localhost:3000` in your browser.
+This should open `localhost:8080` in your browser.
 
 ## How to build the application for deployment
 
@@ -44,6 +44,7 @@ The default output directory is `/dist`.
 - Install the react dev tools
   https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
 - Install the redux dev tools https://github.com/reduxjs/redux-devtools
+- Install Visual Studio Code
 
 ## Based on / Special Thanks
 
